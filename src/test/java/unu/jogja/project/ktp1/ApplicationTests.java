@@ -1,4 +1,4 @@
-package unu.jogja.project.ktp;
+package unu.jogja.project.ktp1;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

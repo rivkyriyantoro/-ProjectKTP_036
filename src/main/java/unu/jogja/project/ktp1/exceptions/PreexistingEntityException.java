@@ -1,4 +1,4 @@
-package unu.jogja.project.ktp.exceptions;
+package unu.jogja.project.ktp1.exceptions;
 
 public class PreexistingEntityException extends Exception {
     public PreexistingEntityException(String message, Throwable cause) {

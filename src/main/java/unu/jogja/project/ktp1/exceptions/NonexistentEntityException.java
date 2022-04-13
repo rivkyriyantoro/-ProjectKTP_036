@@ -1,4 +1,4 @@
-package unu.jogja.project.ktp.exceptions;
+package unu.jogja.project.ktp1.exceptions;
 
 public class NonexistentEntityException extends Exception {
     public NonexistentEntityException(String message, Throwable cause) {

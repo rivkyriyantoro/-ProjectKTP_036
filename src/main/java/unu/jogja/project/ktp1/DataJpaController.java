@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package unu.jogja.project.ktp;
+package unu.jogja.project.ktp1;
 
 import java.io.Serializable;
 import java.util.List;
@@ -13,8 +13,8 @@ import javax.persistence.EntityNotFoundException;
 import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-import unu.jogja.project.ktp.exceptions.NonexistentEntityException;
-import unu.jogja.project.ktp.exceptions.PreexistingEntityException;
+import unu.jogja.project.ktp1.exceptions.NonexistentEntityException;
+import unu.jogja.project.ktp1.exceptions.PreexistingEntityException;
 
 /**
  *
@@ -25,19 +25,17 @@ public class DataJpaController implements Serializable {
     public DataJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
-    private EntityManagerFactory emf = Persistence.createEntityManagerFactory("unu.jogja_demo_jar_0.0.1-SNAPSHOTPU");
+    private EntityManagerFactory emf = Persistence.createEntityManagerFactory("unu.jogja_project.ktp1_jar_0.0.1-SNAPSHOTPU");
+
 
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }
-  
+    
     public DataJpaController() {
         
     }
 
-    
-    
-    
     public void create(Data data) throws PreexistingEntityException, Exception {
         EntityManager em = null;
         try {
@@ -67,7 +65,7 @@ public class DataJpaController implements Serializable {
         } catch (Exception ex) {
             String msg = ex.getLocalizedMessage();
             if (msg == null || msg.length() == 0) {
-                Long id = data.getId();
+                Integer id = data.getId();
                 if (findData(id) == null) {
                     throw new NonexistentEntityException("The data with id " + id + " no longer exists.");
                 }
@@ -80,7 +78,7 @@ public class DataJpaController implements Serializable {
         }
     }
 
-    public void destroy(Long id) throws NonexistentEntityException {
+    public void destroy(Integer id) throws NonexistentEntityException {
         EntityManager em = null;
         try {
             em = getEntityManager();
@@ -125,7 +123,7 @@ public class DataJpaController implements Serializable {
         }
     }
 
-    public Data findData(Long id) {
+    public Data findData(Integer id) {
         EntityManager em = getEntityManager();
         try {
             return em.find(Data.class, id);

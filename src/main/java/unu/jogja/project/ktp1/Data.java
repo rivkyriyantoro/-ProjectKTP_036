@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package unu.jogja.project.ktp;
+package unu.jogja.project.ktp1;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -44,32 +44,24 @@ public class Data implements Serializable {
     @Id
     @Basic(optional = false)
     @Column(name = "id")
-    private Long id;
-    @Basic(optional = false)
+    private Integer id;
     @Column(name = "noktp")
     private String noktp;
-    @Basic(optional = false)
     @Column(name = "nama")
     private String nama;
-    @Basic(optional = false)
     @Column(name = "tgllahir")
     @Temporal(TemporalType.DATE)
     private Date tgllahir;
-    @Basic(optional = false)
     @Column(name = "jeniskelamin")
     private String jeniskelamin;
-    @Basic(optional = false)
     @Column(name = "alamat")
     private String alamat;
-    @Basic(optional = false)
     @Column(name = "agama")
     private String agama;
-    @Basic(optional = false)
     @Column(name = "status")
     private String status;
     @Column(name = "pekerjaan")
     private String pekerjaan;
-    @Basic(optional = false)
     @Column(name = "warganegara")
     private String warganegara;
     @Column(name = "berakhirhingga")
@@ -81,27 +73,15 @@ public class Data implements Serializable {
     public Data() {
     }
 
-    public Data(Long id) {
+    public Data(Integer id) {
         this.id = id;
     }
 
-    public Data(Long id, String noktp, String nama, Date tgllahir, String jeniskelamin, String alamat, String agama, String status, String warganegara) {
-        this.id = id;
-        this.noktp = noktp;
-        this.nama = nama;
-        this.tgllahir = tgllahir;
-        this.jeniskelamin = jeniskelamin;
-        this.alamat = alamat;
-        this.agama = agama;
-        this.status = status;
-        this.warganegara = warganegara;
-    }
-
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -215,7 +195,7 @@ public class Data implements Serializable {
 
     @Override
     public String toString() {
-        return "unu.jogja.project.ktp.Data[ id=" + id + " ]";
+        return "unu.jogja.project.ktp1.Data[ id=" + id + " ]";
     }
     
 }

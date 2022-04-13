@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package unu.jogja.project.ktp;
+package unu.jogja.project.ktp1;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +22,7 @@ public class dataController {
     
     @RequestMapping("/data")
     //@ResponseBody
-    public String getDataKTP(Model model) {
+     public String getDataKTP(Model model) {
         int record = ctrl.getDataCount();
         String result ="";
         try {
@@ -30,7 +30,7 @@ public class dataController {
         } catch (Exception e) {
             result=e.getMessage();
         }
-        model.addAttribute("newData", newData);
+        model.addAttribute("goData", newData);
         model.addAttribute("record", record);
         
         

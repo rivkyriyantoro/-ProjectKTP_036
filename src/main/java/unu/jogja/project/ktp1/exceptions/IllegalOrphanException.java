@@ -1,4 +1,4 @@
-package unu.jogja.project.ktp.exceptions;
+package unu.jogja.project.ktp1.exceptions;
 
 import java.util.ArrayList;
 import java.util.List;

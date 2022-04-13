@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>unu.jogja</groupId>
-	<artifactId>project.ktp</artifactId>
+	<artifactId>project.ktp1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>project.ktp</name>
+	<name>project.ktp1</name>
 	<description>CRUD KTP</description>
 	<properties>
 		<java.version>11</java.version>
@@ -98,6 +98,7 @@
 	  <scope>provided</scope>
 	 </dependency>
 	</dependencies>
+
 
 	<build>
 		<plugins>
