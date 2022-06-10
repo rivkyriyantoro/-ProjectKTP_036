@@ -57,7 +57,7 @@ public class dummyController {
     }
     
     @PostMapping(value="/newData", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    @ResponseBody
+ 
     public String newDummy(@RequestParam("gambar") MultipartFile file, HttpServletRequest data) throws ParseException, Exception{
         
         Dummy dumData = new Dummy();
@@ -74,7 +74,7 @@ public class dummyController {
         
         dummyController.create(dumData);
         
-        return "dummy/create";
+        return "redirect:/read";
     }
     
     @RequestMapping(value = "/image", method = RequestMethod.GET, produces = {MediaType.IMAGE_PNG_VALUE})  
